@@ -33,8 +33,8 @@ Lê Quý Thành - 20230067
 
 ### 4.  Tích hợp Thuật toán 
 Dự án áp dụng các giải thuật kinh điển để giải quyết bài toán hiệu năng:
-* **Merge Sort (`O(N \log N)`):** Sắp xếp danh sách phòng ổn định và hiệu quả.
-* **Binary Search (`O(\log N)`):** Tra cứu nhanh sự tồn tại của phòng trong danh sách lớn.
+* **Merge Sort (`O(N log N)`):** Sắp xếp danh sách phòng ổn định và hiệu quả.
+* **Binary Search (`O(log N)`):** Tra cứu nhanh sự tồn tại của phòng trong danh sách lớn.
 * **Sliding Window (`O(N)`):** Giải quyết bài toán xếp phòng liền kề tối ưu chỉ với 1 vòng lặp.
 * **Backtracking (`O(2^N)`):** Gợi ý combo dịch vụ phù hợp ngân sách (Biến thể bài toán Knapsack).
 
