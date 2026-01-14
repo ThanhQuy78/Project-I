@@ -1,6 +1,8 @@
 #  Hotel Management System (Hệ thống Quản lý Khách sạn)
 
 Một ứng dụng Desktop quản lý khách sạn toàn diện được xây dựng bằng **Python (Tkinter)** và **SQL Server**. Dự án được thiết kế theo **Kiến trúc phân lớp (Layered Architecture)**, tách biệt rõ ràng giữa giao diện, nghiệp vụ và dữ liệu. Đặc biệt, hệ thống tích hợp các **Cấu trúc dữ liệu & Giải thuật** nâng cao để tối ưu hóa hiệu năng xử lý với quy mô dữ liệu lớn (2000+ phòng).
+Lê Quý Thành - 20230067
+Đại học Bách Khoa Hà Nội
 
 ---
 
@@ -84,3 +86,16 @@ python benchmark.py
 ```
 
 ## Thiết kế Cơ sở dữ liệu 
+* **Phong**: SoPhong (PK), TrangThai, MaLP, GhiChu.
+
+* **LoaiPhong**: MaLP (PK), TenLP, GiaTheoNgay, SucChua.
+
+* **KhachHang**: MaKH (PK), TenKH, CCCD (Unique), SDT.
+
+* **PhieuDatPhong**: MaPD (PK), NgayDen, NgayDi.
+
+* **HoaDon**: MaHD (PK), TongTien, PhuThu, TrangThai.
+
+* **DichVu** MaDV (PK), TenDV, Gia.
+  
+* **ChiTietSD**: MaSD (PK), SoLuong, ThoiGian.
