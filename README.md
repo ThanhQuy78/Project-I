@@ -1,7 +1,9 @@
 #  Hotel Management System (Hệ thống Quản lý Khách sạn)
 
 Một ứng dụng Desktop quản lý khách sạn toàn diện được xây dựng bằng **Python (Tkinter)** và **SQL Server**. Dự án được thiết kế theo **Kiến trúc phân lớp (Layered Architecture)**, tách biệt rõ ràng giữa giao diện, nghiệp vụ và dữ liệu. Đặc biệt, hệ thống tích hợp các **Cấu trúc dữ liệu & Giải thuật** nâng cao để tối ưu hóa hiệu năng xử lý với quy mô dữ liệu lớn (2000+ phòng).
+
 Lê Quý Thành - 20230067
+
 Đại học Bách Khoa Hà Nội
 
 ---
@@ -16,7 +18,7 @@ Lê Quý Thành - 20230067
   * **Sắp xếp:** Sắp xếp danh sách hiển thị theo ID hoặc Giá tiền (Sử dụng thuật toán **Merge Sort**).
 
 ### 2.  Quản lý Đặt phòng (Booking System)
-* **Kiểm tra phòng trống:** Xác định chính xác phòng trống trong khoảng thời gian bất kỳ (Sử dụng **Hash Map & Set** để tối ưu tốc độ $O(N)$).
+* **Kiểm tra phòng trống:** Xác định chính xác phòng trống trong khoảng thời gian bất kỳ (Sử dụng **Hash Map & Set** để tối ưu tốc độ `O(N)`).
 * **Chế độ chọn phòng thông minh:**
   * **Tự động (Auto-Allocation):** Tự động đề xuất các phòng **liền kề nhau** cho khách đoàn (Sử dụng thuật toán **Sliding Window**).
   * **Thủ công (Manual Selection):** Cho phép người dùng chọn đích danh phòng mong muốn. Hỗ trợ kiểm tra nhanh ID phòng trong danh sách (Sử dụng **Binary Search**).
@@ -31,10 +33,10 @@ Lê Quý Thành - 20230067
 
 ### 4.  Tích hợp Thuật toán 
 Dự án áp dụng các giải thuật kinh điển để giải quyết bài toán hiệu năng:
-* **Merge Sort ($O(N \log N)$):** Sắp xếp danh sách phòng ổn định và hiệu quả.
-* **Binary Search ($O(\log N)$):** Tra cứu nhanh sự tồn tại của phòng trong danh sách lớn.
-* **Sliding Window ($O(N)$):** Giải quyết bài toán xếp phòng liền kề tối ưu chỉ với 1 vòng lặp.
-* **Backtracking ($O(2^N)$):** Gợi ý combo dịch vụ phù hợp ngân sách (Biến thể bài toán Knapsack).
+* **Merge Sort (`O(N \log N)`):** Sắp xếp danh sách phòng ổn định và hiệu quả.
+* **Binary Search (`O(\log N)`):** Tra cứu nhanh sự tồn tại của phòng trong danh sách lớn.
+* **Sliding Window (`O(N)`):** Giải quyết bài toán xếp phòng liền kề tối ưu chỉ với 1 vòng lặp.
+* **Backtracking (`O(2^N)`):** Gợi ý combo dịch vụ phù hợp ngân sách (Biến thể bài toán Knapsack).
 
 ---
 
