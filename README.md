@@ -46,4 +46,41 @@ Dự án áp dụng các giải thuật kinh điển để giải quyết bài t
 ### Bước 1: Clone dự án
 ```bash
 git clone https://github.com/ThanhQuy78/Project-I.git
-cd hotel-management-system
+cd Project-I
+```
+
+### Bước 2: Cài đặt thư viện
+```bash
+pip install pyodbc
+```
+
+### Bước 3: Cấu hình Database
+Mở file database.py và chỉnh sửa thông tin kết nối phù hợp 
+```bash
+class DatabaseConfig:
+    SERVER = '.\\SQLEXPRESS'  # Tên Server SQL của bạn
+    DATABASE = 'HotelManagementDB'
+```
+Nếu Database chưa được tạo sẵn hay đã tạo nhưng chưa thêm dữ liệu, hệ thống có thể tự động sinh dữ liệu ngẫu nhiên
+
+### Bước 4: Chạy ứng dụng
+```bash
+python gui.py
+```
+
+### Bước 5(Optional): Chạy so sánh các giải thuật
+```bash
+python benchmark.py
+```
+
+## Kiến trúc dự án
+```text
+├── gui.py               # Presentation Layer: Giao diện Tkinter, xử lý sự kiện
+├── services.py          # Business Logic Layer: Chứa class HotelAlgorithms (Logic thuật toán)
+├── repositories.py      # Data Access Layer: Truy vấn SQL, CRUD
+├── models.py            # DTOs: Các class đại diện dữ liệu (Room, BillDetail...)
+├── database.py          # Infrastructure: Kết nối DB và khởi tạo dữ liệu mẫu
+└── benchmark.py         # Testing: Script đo lường hiệu năng giải thuật
+```
+
+## Thiết kế Cơ sở dữ liệu 
