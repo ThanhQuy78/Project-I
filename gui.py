@@ -141,8 +141,8 @@ class HotelApp(tk.Tk):
             
             filtered_rooms.append(r)
 
-        filtered_rooms.sort(key=lambda x: x.id)
-
+        filtered_rooms = HotelAlgorithms.merge_sort(filtered_rooms, key=lambda r: r.id)
+        
         color_map = {
             'Trống': '#4CAF50',     
             'Đang ở': '#F44336',    
@@ -436,7 +436,7 @@ class HotelApp(tk.Tk):
             return
 
         raw_ids = target_stat['room_ids']
-        sorted_ids = HotelAlgorithms.merge_sort_ints(raw_ids)
+        sorted_ids = HotelAlgorithms.merge_sort(raw_ids)
 
         popup = tk.Toplevel(self)
         popup.title(f"Chọn phòng {type_name}")

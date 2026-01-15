@@ -22,23 +22,27 @@ class HotelAlgorithms:
                 stats_map[tid]["room_ids"].append(room.id)
         return list(stats_map.values())
     
+
     @staticmethod
-    def merge_sort_ints(arr):
+    def merge_sort(arr, key=lambda x: x):
         if len(arr) <= 1: return arr
+        
         mid = len(arr) // 2
-        left = HotelAlgorithms.merge_sort_ints(arr[:mid])
-        right = HotelAlgorithms.merge_sort_ints(arr[mid:])
+        left = HotelAlgorithms.merge_sort(arr[:mid], key=key)
+        right = HotelAlgorithms.merge_sort(arr[mid:], key=key)
         
         res = []
         i = j = 0
         while i < len(left) and j < len(right):
-            if left[i] <= right[j]:
+            if key(left[i]) <= key(right[j]):
                 res.append(left[i]); i += 1
             else: 
                 res.append(right[j]); j += 1
+        
         res.extend(left[i:]); res.extend(right[j:])
         return res
 
+    
     @staticmethod
     def binary_search_int(sorted_arr, target):
         low, high = 0, len(sorted_arr) - 1
